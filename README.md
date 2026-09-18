@@ -1,11 +1,8 @@
 # CSES Autograder
 A hybrid Python/C++ local autograder explicitly designed for macOS to test C++ solutions for [CSES Problem Set](https://cses.fi/problemset/) problems.
-It uses a Python `rich` CLI for high-level orchestration, live progress bars, and formatted tables, while delegating the bare-metal execution to a lightweight, sandboxed C++ engine. 
+
 ## Features
-- **Strict Sandbox Constraints:** Enforces 1.0s CPU time, 512MB RAM, and 5MB output bounds via POSIX constraints.
-- **Accurate Memory Measurement:** Overcomes the macOS `RLIMIT_AS` limitation by accurately profiling peak memory footprints (`ru_maxrss`).
-- **Memory-Efficient Diffing:** Validates the target binary's standard output against `.out` files directly via stream extraction to avoid buffering large payloads.
-- **Robust Process Management:** Protects against orphaned processes and compiler hang-ups using POSIX process groups.
+- **Forces Sandbox Constraints:** Enforces 1.0s CPU time, 512MB RAM, and 5MB output bounds via POSIX constraints.
 ## Prerequisites
 - **macOS** (This tool relies on specific Darwin-based memory structures)
 - Python 3.6+
