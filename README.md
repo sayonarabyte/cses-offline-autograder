@@ -20,6 +20,7 @@ A hybrid Python/C++ local autograder explicitly designed for macOS to test C++ s
 ## Getting the Test Cases
 The autograder expects test cases to be placed in a `tests/<normalized_problem_name>/` directory. 
 The problem name is derived from your source file, with all spaces and dashes stripped, lowercased (e.g. `Weird_Algorithm.cpp` looks for `tests/weirdalgorithm/`).
+
 **To automatically fetch all public sample test cases from CSES:**
 ```bash
 ./fetch_samples.py
