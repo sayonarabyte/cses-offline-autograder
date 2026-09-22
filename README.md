@@ -1,7 +1,7 @@
 # CSES Autograder
 A hybrid Python/C++ local autograder explicitly designed for macOS to test C++ solutions for [CSES Problem Set](https://cses.fi/problemset/) problems. The autograder enforces 1.0s CPU time, 512MB RAM, and 5MB output bounds via POSIX to match the original.
 ## Prerequisites
-- **macOS** (This tool relies on specific Darwin-based memory structures)
+- **macOS only** 
 - Python 3.6+
 - `g++` (Standard macOS Clang works)
 ## Installation
