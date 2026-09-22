@@ -122,17 +122,10 @@ int main(int argc, char* argv[]) {
     if (verdict == "AC") {
         lseek(stdout_fd, 0, SEEK_SET);
         
-        // Use stream extraction to compare tokens
         ifstream f_expected(out_file);
         
-        // To read from tmpfile, we can fdopen a duplicated fd, or just use lseek and read
-        // But since we want to use std::cin >> token, we can use a custom streambuf or just read via fdopen.
         FILE* read_stdout_fp = fdopen(dup(stdout_fd), "r");
         
-        // Wait, better yet, just write a small parser. No, let's use string extraction for simplicity.
-        // We'll read the whole file if it's small, or parse manually.
-        // Or simply dup2 it to a new fd and attach ifstream.
-        // In C++, ifstream doesn't take fd easily. So let's use C FILE* fscanf.
         
         bool ok = true;
         string t1, t2;
